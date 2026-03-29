@@ -1,111 +1,120 @@
 # 🌠 NASA Meteorite Explorer
 
-Uma aplicação web interativa para explorar dados de quedas de meteoritos da NASA. Filtre por intervalo de anos, visualize no Google Maps e exporte resultados em CSV ou PDF.
+An interactive web application to explore NASA meteorite landing data. Filter by year range, visualize on Google Maps, and export results as CSV or PDF.
 
-## ✨ Funcionalidades
+## ✨ Features
 
-- 🗺️ **Mapa Interativo**: Visualize meteoritos em um mapa interativo do Google Maps
-- 🔍 **Filtro por Ano**: Filtre meteoritos por intervalo de anos (ano mínimo e máximo)
-- 📊 **Tabela de Dados**: Visualize informações detalhadas em uma tabela ordenável
-- 📥 **Exportação**: Download dos dados em CSV ou PDF
-- 🎯 **Ordenação**: Clique nos cabeçalhos da tabela para ordenar por ID, Nome, Ano ou Classe
-- 📱 **Responsivo**: Funciona bem em dispositivos móveis e desktops
+- 🗺️ **Interactive Map**: View meteorites on an interactive Google Maps visualization
+- 🔍 **Year Range Filter**: Filter meteorites by minimum and maximum year
+- 📊 **Data Table**: View detailed information in a sortable table format
+- 📥 **Export Functionality**: Download data in CSV or PDF format
+- 🎯 **Column Sorting**: Click table headers (ID, Name, Year, Class) to sort data
+- 📱 **Responsive Design**: Works seamlessly on both mobile and desktop devices
 
-## 🚀 Como Usar
+## 🚀 How to Use
 
-### 1. Abrir a Aplicação
-Abra o arquivo `index.html` em seu navegador web.
+### 1. Open the Application
 
-### 2. Explorar Dados
-- A aplicação carrega automaticamente todos os meteoritos da NASA
-- Use o mapa para visualizar a distribuição geográfica dos meteoritos
-- Veja a lista completa na tabela abaixo
+Open the `index.html` file in your web browser.
 
-### 3. Filtrar por Ano
-- Digite o **ano mínimo** no campo "Min Year"
-- Digite o **ano máximo** no campo "Max Year"
-- Clique em "Filter" para aplicar
+### 2. Explore the Data
 
-### 4. Ordenar Dados
-- Clique em qualquer cabeçalho da tabela (ID, Name, Year, Class) para ordenar
-- Clique novamente para inverter a ordem (ascendente/descendente)
+- The application automatically loads all NASA meteorites
+- Use the interactive map to see the geographic distribution
+- View the complete list in the table below the map
 
-### 5. Exportar Dados
-- Clique em **"Save as CSV"** para baixar em formato Excel (CSV)
-- Clique em **"Save as PDF"** para baixar em formato PDF com tabela formatada
+### 3. Filter by Year
 
-## 💻 Tecnologias Utilizadas
+- Enter the **minimum year** in the "Min Year" field
+- Enter the **maximum year** in the "Max Year" field
+- Click the "Filter" button to apply the filter
 
-- **HTML5** - Estrutura da página
-- **CSS3** - Estilização e layout
-- **JavaScript (ES6+)** - Lógica da aplicação
-- **Google Maps API** - Renderização do mapa
-- **jsPDF** - Geração de arquivos PDF
-- **NASA API** - Dados de meteoritos (com fallback para arquivo local)
+### 4. Sort the Data
 
-## 📁 Estrutura do Projeto
+- Click any table header (ID, Name, Year, Class) to sort by that column
+- Click again to reverse the sort order (ascending/descending)
+
+### 5. Export the Data
+
+- Click **"Save as CSV"** to download filtered results in Excel-compatible format
+- Click **"Save as PDF"** to download with formatted table layout
+
+## 💻 Technologies Used
+
+- **HTML5** - Page structure and semantics
+- **CSS3** - Styling and responsive layout
+- **JavaScript (ES6+)** - Application logic and interactivity
+- **Google Maps API** - Interactive map rendering
+- **jsPDF** - PDF file generation
+- **NASA API** - Meteorite data source (with local JSON fallback)
+
+## 📁 Project Structure
 
 ```
 NASA-Meteorite-Explorer/
-├── index.html              # Arquivo principal HTML
+├── index.html              # Main HTML file
 ├── css/
-│   └── style.css          # Estilos da aplicação
+│   └── style.css          # Application styles
 ├── js/
-│   ├── main.js            # Lógica principal da aplicação
-│   ├── dataHandler.js     # Carregamento de dados (API/local)
-│   ├── map.js             # Gerenciamento do mapa
-│   └── uiManager.js       # Funções de interface (tabela, filtros, export)
-├── Meteorite_Landings.json # Dados de fallback locais
-└── README.md              # Este arquivo
+│   ├── main.js            # Main application logic and event handlers
+│   ├── dataHandler.js     # Data loading (API and local file)
+│   ├── map.js             # Google Maps initialization and management
+│   └── uiManager.js       # UI functions (table, filters, exports)
+├── Meteorite_Landings.json # Backup local data file
+└── README.md              # This file
 ```
 
-## 🔧 Detalhes Técnicos
+## 🔧 Technical Details
 
-### Fluxo de Carregamento de Dados
-1. A aplicação tenta carregar dados da **NASA API**
-2. Se a API não estiver disponível, utiliza o arquivo local **Meteorite_Landings.json**
-3. Os dados são armazenados em memória para operações rápidas
+### Data Loading Flow
 
-### Módulos JavaScript
-- **main.js**: Inicialização, event listeners dos botões, orquestração
-- **dataHandler.js**: Fetch de dados (API ou arquivo local)
-- **map.js**: Inicialização e gerenciamento do Google Maps
-- **uiManager.js**: Renderização de tabela, filtros, ordenação, exportação
+1. Application attempts to fetch data from the **NASA API**
+2. If API is unavailable, falls back to local **Meteorite_Landings.json** file
+3. Data is stored in memory for quick operations and filtering
 
-### Exportação de Dados
-- **CSV**: Arquivo de texto separado por vírgulas, compatível com Excel
-- **PDF**: Documento PDF com tabela formatada usando jsPDF
+### JavaScript Modules
 
-## 📝 Dados Incluídos
+- **main.js**: Application initialization, event listeners, and orchestration
+- **dataHandler.js**: Data fetching from API or local file
+- **map.js**: Google Maps initialization and marker management
+- **uiManager.js**: Table rendering, filtering, sorting, and export functions
 
-O arquivo `Meteorite_Landings.json` contém **45.716 registros** de meteoritos com as seguintes informações:
-- **ID**: Identificador único
-- **Name**: Nome do meteorito
-- **Year**: Ano da queda (formato timestamp)
-- **Class**: Classificação mineralógica
-- **Mass**: Massa em gramas
-- **Fall**: Tipo de queda (Fell/Found)
-- **reclat/reclong**: Latitude e Longitude
+### Data Export
 
-## 🎓 Contexto Acadêmico
+- **CSV**: Comma-separated values format, compatible with Excel and other spreadsheet applications
+- **PDF**: Formatted PDF document with table layout using jsPDF library
 
-Este projeto foi desenvolvido como trabalho final para a disciplina **INFO-3168 - JavaScript 2** do curso de **Web Development and Internet Applications**.
+## 📊 Data Description
 
-**Aluno**: Christiane Nogueira Mendes  
+The `Meteorite_Landings.json` file contains **45,716 meteorite records** with the following information:
+
+- **ID**: Unique meteorite identifier
+- **Name**: Name of the meteorite
+- **Year**: Fall year (timestamp format)
+- **Class**: Mineralogical classification
+- **Mass**: Weight in grams
+- **Fall**: Type of fall (Fell/Found)
+- **reclat/reclong**: Latitude and Longitude coordinates
+
+## 🎓 Academic Context
+
+This project was developed as a final assignment for the **INFO-3168 - JavaScript 2** course in the **Web Development and Internet Applications** program.
+
+**Student**: Christiane Nogueira Mendes  
 **ID**: 1242980
 
-## 📜 Licença
+## 📜 License
 
-Este projeto está sob a licença **MIT**. Veja o arquivo LICENSE para mais detalhes.
+This project is licensed under the **MIT License**. See the LICENSE file for details.
 
-## 🤝 Contribuições
+## 🤝 Contributing
 
-Sugestões e melhorias são bem-vindas! Sinta-se livre para abrir issues ou pull requests.
+Suggestions and improvements are welcome! Feel free to open issues or submit pull requests.
 
-## 📧 Contato
+## 📧 Contact
 
-Para dúvidas ou sugestões, entre em contato através do GitHub ou por email.
+For questions or suggestions, please reach out through GitHub or email.
 
 ---
 
-**Feito com ❤️ por Christiane Nogueira Mendes**
+**Made with ❤️ by Christiane Nogueira**
