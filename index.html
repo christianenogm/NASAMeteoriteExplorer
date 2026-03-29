@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+Course: Web Development and Internet Applications
+Student: Christiane Nogueira Mendes - ID: 1242980
+INFO-3168 - JavaScript 2 - Project 1 
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Meteorite Explore</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <h1>🌠 NASA Meteorite Explorer 🌠</h1>
+
+    <div id="map" style="height: 500px; width: 100%; margin-bottom: 20px;"></div>
+
+    <div id="controls">
+        <input type="text" id="minYear" placeholder="Min Year">
+        <input type="text" id="maxYear" placeholder="Max Year">
+        <br>
+        <button id="filterBtn">Filter</button>
+        <br><br>
+        <button id="downloadCsvBtn">Save as CSV</button>
+        <button id="downloadPdfBtn">Save as PDF</button>
+    </div>
+
+    <table id="meteoriteTable" border="1" cellspacing="0" cellpadding="5">
+        <thead>
+            <tr>
+                <th id="sortId">ID</th>
+                <th id="sortName">Name</th>
+                <th id="sortYear">Year</th>
+                <th id="sortClass">Class</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Table rows here -->
+        </tbody>
+    </table>
+
+    <div id="message"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+    <script src="./js/dataHandler.js"></script>
+    <script src="./js/uiManager.js"></script>
+    <script src="./js/map.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDenIr6ndIcVbnYCNrQBSCj6YH6Ekm69XI&callback=initMap"
+        async defer></script>
+
+</body>
+
+</html>
