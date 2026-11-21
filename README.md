@@ -1,5 +1,9 @@
 # 🌠 NASA Meteorite Explorer
 
+## 🌐 Live Demo
+
+[View the live demo](https://christianenogm.github.io/NASAMeteoriteExplorer/)
+
 An interactive web application to explore NASA meteorite landing data. Filter by year range, visualize on Google Maps, and export results as CSV or PDF.
 
 ## ✨ Features
